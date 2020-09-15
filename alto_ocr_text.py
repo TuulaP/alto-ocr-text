@@ -34,6 +34,7 @@ def writeToFile (filename, content):
 
 
 
+
 for file in onlyfiles:
 
     outfile = altodir + "/" + file
@@ -43,6 +44,7 @@ for file in onlyfiles:
     outfile = outdir + "/" + file.replace(".xml",".txt")
 
     print(outfile)
+    txtcontents = ""
 
 
     xmlns = tree.getroot().tag.split('}')[0].strip('{')
@@ -51,8 +53,10 @@ for file in onlyfiles:
             sys.stdout.write('\n')
             for line in lines.findall('{%s}String' % xmlns):
                text = line.attrib.get('CONTENT') + ' '
-               sys.stdout.write(text)
-               writeToFile(outfile, text)
+               #sys.stdout.write(text)
+               txtcontents += text
+         
+        writeToFile(outfile, txtcontents)
     else:
         print('ERROR: Not a valid ALTO file (namespace declaration missing)')
 
