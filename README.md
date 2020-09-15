@@ -3,4 +3,4 @@ Extracts the text from an [ALTO](http://www.loc.gov/standards/alto/) file and wr
 
 Use like:
 
-    python alto_ocr_text.py <altofile>
+    python alto_ocr_text.py <altofiledirectory> <outputdirectoryfortxts>
