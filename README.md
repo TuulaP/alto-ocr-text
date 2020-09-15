@@ -1,5 +1,5 @@
 # alto-ocr-text
-Extracts the text from an [ALTO](http://www.loc.gov/standards/alto/) file and writes it to `stdout`.
+Extracts the text from a directory containing [ALTO](http://www.loc.gov/standards/alto/) files and writes them to outputdirectory with .txt suffix.
 
 Use like:
 
